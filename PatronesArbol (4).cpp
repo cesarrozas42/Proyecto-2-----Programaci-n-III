@@ -125,7 +125,6 @@ void GestorArbol::quitarObservador(ObservadorArbol* observador) {
 }
 
 void GestorArbol::notificar(const EventoArbol& evento) {
-    // Se copia la lista para permitir que un observador se desregistre al recibir un evento.
     const auto copia = observadores;
     for (ObservadorArbol* observador : copia) {
         if (observador &&
