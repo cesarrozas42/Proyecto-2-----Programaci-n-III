@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 
-// STRATEGY: cada estrategia crea una implementacion distinta de Arbol.
 class EstrategiaEjecucion {
 public:
     virtual ~EstrategiaEjecucion() = default;
@@ -46,7 +45,6 @@ public:
     virtual void alCambiar(const EventoArbol& evento) = 0;
 };
 
-// Contexto de Strategy y sujeto de Observer.
 class GestorArbol {
 private:
     std::unique_ptr<EstrategiaEjecucion> estrategia;
